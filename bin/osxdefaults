@@ -89,7 +89,7 @@ defaults write com.apple.finder QuitMenuItem -bool true
 chflags nohidden ~/Library
 
 # Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+#defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: use list view in all windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
