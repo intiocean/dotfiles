@@ -1,4 +1,13 @@
 [alias]
+    # aliases from http://gitimmersion.com/lab_11.html
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+
     # https://git.wiki.kernel.org/articles/a/l/i/Aliases.html
 
     # `git remote prune origin`: remove remote-tracking branches that were deleted from the remote repo
