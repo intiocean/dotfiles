@@ -50,6 +50,7 @@
     # Use custom `.gitignore` and `.gitattributes`
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
+	pager = less -+X -+F
 
 [credential]
     helper = osxkeychain
