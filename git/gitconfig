@@ -39,6 +39,7 @@
 
     # Delete branches that have already been merged into master
     delete-merged = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
+	pushf = push --force-with-lease
 
 
 [color]
