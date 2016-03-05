@@ -3,7 +3,7 @@
 # bash_prompt
 
 # Example:
-# nicolas@host: ~/.dotfiles on master[+!?$]
+# nicolas@host: ~/.dotfiles on (master +)
 # $
 
 # Screenshot: http://i.imgur.com/DSJ1G.png
@@ -40,6 +40,12 @@ style_host="\[${RESET}${SOLAR_YELLOW}\]"
 style_path="\[${RESET}${SOLAR_GREEN}\]"
 style_chars="\[${RESET}${SOLAR_WHITE}\]"
 style_branch="${SOLAR_CYAN}"
+
+# Settings for $(__git_ps1)
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUPSTREAM="verbose"
+# export GIT_PS1_SHOWUNTRACKEDFILES=true for some reason this gives an error when enabled -> leave here to investigate later
 
 if [[ "$SSH_TTY" ]]; then
     # connected via ssh
