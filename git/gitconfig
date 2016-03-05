@@ -83,3 +83,5 @@
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool]
 	prompt = false
+[branch]
+	autosetuprebase = always
