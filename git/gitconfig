@@ -85,3 +85,7 @@
 	prompt = false
 [branch]
 	autosetuprebase = always
+[diff "localizablestrings"]
+    # add the ability to diff Xcode's Localizable.strings files
+    textconv = "iconv -f utf-16 -t utf-8"
+    binary = false

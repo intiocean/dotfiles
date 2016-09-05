@@ -1,2 +1,5 @@
 # Automatically normalize line endings for all text-based files
 * text=auto
+
+# add the ability to diff Xcode's Localizable.strings files
+*.strings utf16 diff=localizablestrings
