@@ -39,8 +39,13 @@
 
     # Delete branches that have already been merged into master
     delete-merged = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
-	pushf = push --force-with-lease
+    
+    # better force push
+    pushf = push --force-with-lease
 
+    # show the commit hash of HEAD
+    curr = rev-parse --short HEAD
+    current = !git --no-pager log --oneline --color HEAD^..HEAD
 
 [color]
     # color opts: normal, black, red, green, yellow, blue, magenta, cyan, or white
@@ -89,3 +94,6 @@
     # add the ability to diff Xcode's Localizable.strings files
     textconv = "iconv -f utf-16 -t utf-8"
     binary = false
+[pager]
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
